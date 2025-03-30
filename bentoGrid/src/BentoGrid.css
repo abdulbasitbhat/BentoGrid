@@ -1,9 +1,15 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .gridContainer{
     display:grid;
     /* grid-template-columns: 2rem 10rem 5rem;
     grid-template-rows: 2rem 10rem 5rem; */
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
+    /* grid-template-rows: auto auto auto auto; caused issue. made layout unpredectable*/ 
     gap: 0.5rem;
     width: 50%;
 }
@@ -18,6 +24,7 @@
 .item1{
     grid-row:1 / span 4;
     height: 16rem;
+    /* width: 12rem; */
 }
 
 .item2{
@@ -34,6 +41,7 @@
 .item4{
     grid-row: 5 / span 4;
     height: 16rem;
+    /* width: 12rem; */
 }
 
 .item5{
@@ -55,4 +63,30 @@
 .item8{
     grid-column: 3 / span 2;
     grid-row: 7 / span 2;
+}
+
+.flexContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:10rem;
+}
+
+.flexContainer2{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    /* width:10rem; */
+}
+
+.flexContainer > .text{
+    font-size: 1rem;
+}
+
+.text > .quicker{
+    font-style: italic;
+}
+
+.createPost{
+    width: 5rem;
 }
